@@ -1,8 +1,4 @@
 /*
-Commit 3
-Create 20 divs of the square class and append them to the body element.
-Hint: Use .appendChild().
-
 Commit 4
 Add functionality so that, when you click on each square, it changes the color of that individual square to green.
 Hint: Either add the event listener while creating the squares or listen for events on the body element.
@@ -35,6 +31,9 @@ let setColorBtn = document.querySelector('#set-color');
 let colorField  = document.querySelector('#color-field');
 let brush       = document.querySelector('.brush');
 
+// Global Vars
+let currentColor = '#1B4370';
+
 /**
  * @name handleSetColor
  * @description 
@@ -46,6 +45,11 @@ const handleSetColor = (e) => {
   e.preventDefault();
 
   brush.style.background = colorField.value.toString();
+  currentColor = colorField.value.toString();
+}
+
+const handlePaintSquare = (e) => {
+  e.target.style.background = currentColor;
 }
 
 setColorBtn.addEventListener('click', handleSetColor);
@@ -54,5 +58,8 @@ for (let i = 0; i < 20; i += 1) {
   let square = document.createElement('div');
   square.setAttribute('class', 'square');
   document.body.append(square);
+  square.addEventListener('click', handlePaintSquare);
 }
+
+
 
