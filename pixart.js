@@ -1,12 +1,4 @@
 /*
-Commit 1
-When you click on the Set Color button, it should change the color of the "brush" box to the color specified in the input field.
-You can use document.querySelector (or another document method) to select the element, then add an event listener.
-Hint: You'll notice that the page refreshes whenever you click the button. You need to prevent this from happening using a method you may not have used before. Search for "javascript event prevent default" on Google.
-
-Commit 2
-The same thing should happen when you press the Enter key from inside the input field.
-
 Commit 3
 Create 20 divs of the square class and append them to the body element.
 Hint: Use .appendChild().
@@ -58,5 +50,9 @@ const handleSetColor = (e) => {
 
 setColorBtn.addEventListener('click', handleSetColor);
 
-
+for (let i = 0; i < 20; i += 1) {
+  let square = document.createElement('div');
+  square.setAttribute('class', 'square');
+  document.body.append(square);
+}
 
