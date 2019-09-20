@@ -1,10 +1,4 @@
 /*
-Commit 4
-Add functionality so that, when you click on each square, it changes the color of that individual square to green.
-Hint: Either add the event listener while creating the squares or listen for events on the body element.
-
-Commit 5
-Modify your code so that, when you click on each square, it changes to the color set using your input (instead of green) every time.
 Commit 6
 Modify your code so that you're creating 8,000 divs instead of 20.
 Modify the event that changes your box colors from click to mouseover.
@@ -54,11 +48,11 @@ const handlePaintSquare = (e) => {
 
 setColorBtn.addEventListener('click', handleSetColor);
 
-for (let i = 0; i < 20; i += 1) {
+for (let i = 0; i < 8000; i += 1) {
   let square = document.createElement('div');
   square.setAttribute('class', 'square');
   document.body.append(square);
-  square.addEventListener('click', handlePaintSquare);
+  square.addEventListener('mouseenter', handlePaintSquare);
 }
 
 
