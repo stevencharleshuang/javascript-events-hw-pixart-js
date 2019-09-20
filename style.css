@@ -28,3 +28,16 @@ h1 {
 body {
   background-image: url('ps_neutral.png');
 }
+
+.swatch-box {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-evenly;
+
+}
+
+.swatch {
+  width: 100px;
+  height: 100px;
+  background: white;
+}
